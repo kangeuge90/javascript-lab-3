@@ -55,20 +55,40 @@ function editSubmission(array, index, score) {
 }
 
 //6.  
-function findSubmissionbyName(array, name) {
+function findSubmissionByName(array, name) {
     return array.find(array => array.name == name)
 }
 
 //7.  
+//------------------------------------
+// function findLowestScore(array) {
+//     let minValue = array[0]
+//     array.forEach(array => {
+//         if (array.score < minValue) {
+//             minValue = array
+//         }
+//     });
+//     return minValue
+// }
+// This is returning only the first object in the array for some reason.  
+//------------------------------------
+
+//-----ALTERNATE SOLUTION to 7.  -------
+//7.1
 function findLowestScore(array) {
-    let minValue = array[0]
+    let minValue = Infinity
     array.forEach(array => {
         if (array.score < minValue) {
-            minValue = array
+            minValue = array.score
         }
     });
-    return minValue
+    return findSubmissionByScore(array, minValue)
 }
+//7.2  
+function findSubmissionByScore(array, score) {
+    return array.find(array => array.score == score)
+}
+//-----ALTERNATE SOLUTION to 7.  -------
 
 //8.  
 function findAverageScore(array) {

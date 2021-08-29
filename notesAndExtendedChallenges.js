@@ -106,6 +106,22 @@
 //Solution:  Created findSubmissionByScore to find the object associated 
 //with the score
 
+//-----ALTERNATE SOLUTION to 7.  -------
+// function findLowestScore(array) {
+//     let minValue = Infinity
+//     array.forEach(array => {
+//         if (array.score < minValue) {
+//             minValue = array.score
+//         }
+//     });
+//     return findSubmissionByScore(array, minValue)
+// }
+// //7.2  
+// function findSubmissionByScore(array, score) {
+//     return array.find(array => array.score == score)
+// }
+//-----ALTERNATE SOLUTION to 7.  -------
+
 // 8.  Declare a function named findAverageScore
 // Parameter(s): array
 // Functionality: return the average quiz score.  Use a for...of loop.
